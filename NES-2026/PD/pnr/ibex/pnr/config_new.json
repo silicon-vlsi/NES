@@ -1,0 +1,30 @@
+{
+  "DESIGN_NAME": "ibex_core",
+
+  "VERILOG_FILES": [
+    "base/1_2_yosys.v"
+  ],
+
+  "CLOCK_PORT": "clk_i",
+  "CLOCK_PERIOD": 50,
+
+  "PNR_SDC_FILE": "synth.sdc",
+  "SIGNOFF_SDC_FILE": "synth.sdc",
+
+  "DIE_AREA": "0 0 700 700",
+  "CORE_AREA": "20 20 680 680",
+
+  "FP_CORE_UTIL": 30,
+
+  "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+
+  "RUN_POST_GPL_DESIGN_REPAIR": "false",
+  "RUN_POST_CTS_RESIZER_TIMING": "false",
+  "RUN_POST_GRT_RESIZER_TIMING": "false",
+
+  "RUN_SYNTHESIS": false,
+  "RUN_VERILATOR": false,
+  "RUN_LINTER": false,
+  "SYNTH_SKIP": true,
+  "SYNTH_ELABORATE_ONLY": true
+}

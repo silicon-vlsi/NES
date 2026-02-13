@@ -1,0 +1,1 @@
+librelane -p sky130A -s sky130_fd_sc_hd --design-dir . --run-tag Floorplan -F Odb.WriteVerilogHeader -T OpenROAD.DetailedPlacement config_new.json

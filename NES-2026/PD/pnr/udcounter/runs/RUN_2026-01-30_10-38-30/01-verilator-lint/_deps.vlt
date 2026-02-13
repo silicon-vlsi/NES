@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/foss/designs/Experiments/pnr/udcounter/runs/RUN_2026-01-30_10-38-30/tmp/431e1c8c8f9341f5b1340a0c71aca527.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/foss/designs/Experiments/pnr/udcounter/runs/RUN_2026-01-30_10-38-30/tmp/431e1c8c8f9341f5b1340a0c71aca527.bb.v"

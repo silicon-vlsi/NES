@@ -1,0 +1,1 @@
+librelane -p sky130A -s sky130_fd_sc_hd --design-dir . --run-tag Floorplan -F Odb.RemovePDNObstructions -T OpenROAD.GlobalPlacement config_new.json

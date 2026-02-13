@@ -1,0 +1,27 @@
+{
+  "DESIGN_NAME": "ibex_core",
+
+  "VERILOG_FILES": [
+    "base/1_2_yosys.v"
+  ],
+
+  "CLOCK_PORT": "clk_i",
+  "CLOCK_PERIOD": 20,
+
+  "PNR_SDC_FILE": "base/1_synth.sdc",
+  "SIGNOFF_SDC_FILE": "base/1_synth.sdc",
+
+  "DIE_AREA": "0 0 700 700",
+  "CORE_AREA": "20 20 680 680",
+
+  "FP_CORE_UTIL": 45,
+  "PL_TARGET_DENSITY_PCT": 50,
+
+  "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+
+  "RUN_SYNTHESIS": false,
+  "RUN_VERILATOR": false,
+  "RUN_LINT": false,
+  "SYNTH_SKIP": true,
+  "SYNTH_ELABORATE_ONLY": true
+}

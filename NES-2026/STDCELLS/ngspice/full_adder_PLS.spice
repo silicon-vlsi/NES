@@ -1,0 +1,370 @@
+* NGSPICE file created from full_adder_mag.ext - technology: sky130A
+.title Full_Adder
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.temp 27
+.global VPWR VGND VNB VPB
+
+
+VDD VPWR VGND 1.8
+VSS VGND 0 0
+
+V1 inA VGND PULSE(0 1.8 0u 10n 10n 5u 10u)
+V2 inB VGND PULSE(0 1.8 0u 10n 10n 10u 20u)
+V3 inC VGND PULSE(0 1.8 0u 10n 10n 20u 40u)
+
+
+.subckt sky130_fd_sc_hd__and2_1 A B VGND VNB VPB VPWR X
+X0 VPWR B a_59_75# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.16655 pd=1.39 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1 X a_59_75# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.475 pd=2.95 as=0.16655 ps=1.39 w=1 l=0.15
+X2 VGND B a_145_75# VNB sky130_fd_pr__nfet_01v8 ad=0.1118 pd=1.04 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3 a_59_75# A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.1176 ps=1.4 w=0.42 l=0.15
+X4 X a_59_75# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.182 pd=1.86 as=0.1118 ps=1.04 w=0.65 l=0.15
+X5 a_145_75# A a_59_75# VNB sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1176 ps=1.4 w=0.42 l=0.15
+
+*PARASITICS 
+C0 A VGND 0.01472f
+C1 B VPWR 0.01175f
+C2 VPWR a_59_75# 0.15028f
+C3 VGND a_145_75# 0.00468f
+C4 B a_59_75# 0.14331f
+C5 X VPB 0.01265f
+C6 X VGND 0.09933f
+C7 VPB VPWR 0.07293f
+C8 VPWR VGND 0.04608f
+C9 VPB B 0.06287f
+C10 VPB a_59_75# 0.05631f
+C11 B VGND 0.01146f
+C12 a_59_75# VGND 0.11564f
+C13 X A 0
+C14 X a_145_75# 0
+C15 A VPWR 0.03623f
+C16 A B 0.09709f
+C17 A a_59_75# 0.08088f
+C18 VPWR a_145_75# 0
+C19 VPB VGND 0.008f
+C20 a_59_75# a_145_75# 0.00658f
+C21 X VPWR 0.11122f
+C22 X B 0.00276f
+C23 X a_59_75# 0.10872f
+C24 A VPB 0.08057f
+C25 VGND VNB 0.3114f
+C26 X VNB 0.10018f
+C27 B VNB 0.11287f
+C28 A VNB 0.17379f
+C29 VPWR VNB 0.27345f
+C30 VPB VNB 0.51617f
+C31 a_59_75# VNB 0.17706f
+.ends
+
+.subckt sky130_fd_sc_hd__or2_1 A B VGND VNB VPB VPWR X
+X0 VGND A a_68_297# VNB sky130_fd_pr__nfet_01v8 ad=0.10025 pd=0.985 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1 a_68_297# B VGND VNB sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2 X a_68_297# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.10025 ps=0.985 w=0.65 l=0.15
+X3 VPWR A a_150_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.14575 pd=1.335 as=0.0441 ps=0.63 w=0.42 l=0.15
+X4 X a_68_297# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.34 pd=2.68 as=0.14575 ps=1.335 w=1 l=0.15
+X5 a_150_297# B a_68_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.1092 ps=1.36 w=0.42 l=0.15
+
+*PARASITICS 
+
+
+C0 VPB A 0.03097f
+C1 VPWR a_68_297# 0.08898f
+C2 a_68_297# X 0.10534f
+C3 VPWR X 0.12857f
+C4 a_150_297# VGND 0
+C5 A VGND 0.03465f
+C6 B A 0.07509f
+C7 a_150_297# a_68_297# 0.00477f
+C8 a_68_297# A 0.15786f
+C9 a_150_297# VPWR 0.00193f
+C10 a_150_297# X 0
+C11 VPWR A 0.00846f
+C12 X A 0.01305f
+C13 VPB VGND 0.0112f
+C14 B VPB 0.0462f
+C15 VPB a_68_297# 0.06114f
+C16 VPB VPWR 0.08053f
+C17 VPB X 0.0209f
+C18 B VGND 0.04365f
+C19 a_68_297# VGND 0.11796f
+C20 B a_68_297# 0.09843f
+C21 VPWR VGND 0.04645f
+C22 X VGND 0.11395f
+C23 B VPWR 0.00855f
+C24 B X 0
+C25 VGND VNB 0.32043f
+C26 X VNB 0.10095f
+C27 A VNB 0.11072f
+C28 B VNB 0.18272f
+C29 VPWR VNB 0.26856f
+C30 VPB VNB 0.51617f
+C31 a_68_297# VNB 0.15387f
+.ends
+
+.subckt sky130_fd_sc_hd__xor2_1 A B VGND VNB VPB VPWR X
+X0 X a_35_297# a_285_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.3 pd=2.6 as=0.26 ps=2.52 w=1 l=0.15
+X1 X B a_285_47# VNB sky130_fd_pr__nfet_01v8 ad=0.25025 pd=1.42 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2 a_35_297# B VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X3 a_117_297# B a_35_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X4 VPWR B a_285_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X5 VGND A a_35_297# VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X6 VGND a_35_297# X VNB sky130_fd_pr__nfet_01v8 ad=0.208 pd=1.94 as=0.25025 ps=1.42 w=0.65 l=0.15
+X7 a_285_297# A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X8 VPWR A a_117_297# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X9 a_285_47# A VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+
+*PARASITICS 
+
+C0 a_285_297# a_35_297# 0.02504f
+C1 a_35_297# VPB 0.06993f
+C2 B VGND 0.03045f
+C3 a_285_47# VGND 0.00552f
+C4 a_285_297# VPB 0.01327f
+C5 B X 0.01488f
+C6 A B 0.22134f
+C7 a_117_297# VPWR 0.00852f
+C8 a_285_47# X 0.00206f
+C9 a_35_297# VGND 0.17666f
+C10 a_285_297# VGND 0.00394f
+C11 VPB VGND 0.00696f
+C12 a_35_297# X 0.166f
+C13 A a_35_297# 0.06334f
+C14 a_285_297# X 0.07125f
+C15 A a_285_297# 0.00749f
+C16 VPB X 0.01541f
+C17 A VPB 0.05101f
+C18 VPWR B 0.07031f
+C19 a_117_297# B 0.00777f
+C20 a_285_47# VPWR 0
+C21 VGND X 0.1729f
+C22 A VGND 0.03254f
+C23 a_35_297# VPWR 0.09604f
+C24 a_117_297# a_35_297# 0.00641f
+C25 a_285_297# VPWR 0.24631f
+C26 VPWR VPB 0.06891f
+C27 A X 0.00166f
+C28 a_285_47# B 0
+C29 VPWR VGND 0.06426f
+C30 a_35_297# B 0.203f
+C31 a_117_297# VGND 0.00177f
+C32 a_285_47# a_35_297# 0.00723f
+C33 a_285_297# B 0.05532f
+C34 VPB B 0.06969f
+C35 VPWR X 0.05365f
+C36 A VPWR 0.03484f
+C37 a_117_297# X 0
+C38 VGND VNB 0.43488f
+C39 X VNB 0.06491f
+C40 VPWR VNB 0.33278f
+C41 A VNB 0.16672f
+C42 B VNB 0.21337f
+C43 VPB VNB 0.69336f
+C44 a_285_297# VNB 0.00137f
+C45 a_35_297# VNB 0.25457f
+
+.ends
+
+*.subckt full_adder_mag inA inB inC sum carry VPWR VGND
+Xsky130_fd_sc_hd__and2_1_0 inA inB VGND SUB sky130_fd_sc_hd__or2_1_0/VPB VPWR and2_out
++ sky130_fd_sc_hd__and2_1
+Xsky130_fd_sc_hd__and2_1_1 inC sky130_fd_sc_hd__xor2_1_1/A VGND SUB sky130_fd_sc_hd__or2_1_0/VPB
++ VPWR and1_out sky130_fd_sc_hd__and2_1
+Xsky130_fd_sc_hd__or2_1_0 and2_out and1_out VGND SUB sky130_fd_sc_hd__or2_1_0/VPB
++ VPWR carry sky130_fd_sc_hd__or2_1
+Xsky130_fd_sc_hd__xor2_1_0 inA inB VGND SUB sky130_fd_sc_hd__or2_1_0/VPB VPWR sky130_fd_sc_hd__xor2_1_1/A
++ sky130_fd_sc_hd__xor2_1
+Xsky130_fd_sc_hd__xor2_1_1 sky130_fd_sc_hd__xor2_1_1/A inC VGND SUB sky130_fd_sc_hd__or2_1_0/VPB
++ VPWR sum sky130_fd_sc_hd__xor2_1
+
+*PARASITICS
+C0 and1_out inB 0
+C1 carry sky130_fd_sc_hd__or2_1_0/a_150_297# 0
+C2 sky130_fd_sc_hd__and2_1_0/a_59_75# sky130_fd_sc_hd__and2_1_1/a_59_75# 0.00197f
+C3 sky130_fd_sc_hd__or2_1_0/a_68_297# and2_out 0.03266f
+C4 sky130_fd_sc_hd__and2_1_1/a_59_75# sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C5 sky130_fd_sc_hd__or2_1_0/VPB sky130_fd_sc_hd__and2_1_1/a_59_75# 0.00223f
+C6 VPWR VGND 0.29808f
+C7 sky130_fd_sc_hd__xor2_1_1/a_117_297# VPWR -0.00199f
+C8 and2_out inB 0.14256f
+C9 sky130_fd_sc_hd__and2_1_0/a_145_75# VGND 0
+C10 sky130_fd_sc_hd__xor2_1_1/a_285_297# VPWR 0.00734f
+C11 sky130_fd_sc_hd__xor2_1_0/a_285_297# VGND -0.00106f
+C12 sky130_fd_sc_hd__xor2_1_0/a_117_297# sky130_fd_sc_hd__xor2_1_1/A 0.00176f
+C13 inC sky130_fd_sc_hd__xor2_1_1/a_285_47# 0.00315f
+C14 and1_out sky130_fd_sc_hd__and2_1_1/a_59_75# 0.02617f
+C15 sky130_fd_sc_hd__or2_1_0/a_68_297# inB 0
+C16 inC sky130_fd_sc_hd__xor2_1_1/A 0.50005f
+C17 sky130_fd_sc_hd__xor2_1_1/a_35_297# sky130_fd_sc_hd__xor2_1_1/A 0.18956f
+C18 sky130_fd_sc_hd__xor2_1_0/a_117_297# sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C19 inA sky130_fd_sc_hd__xor2_1_1/A 0.06634f
+C20 and2_out sky130_fd_sc_hd__and2_1_1/a_59_75# 0.05108f
+C21 carry sky130_fd_sc_hd__xor2_1_1/A 0.00653f
+C22 sky130_fd_sc_hd__and2_1_0/a_145_75# VPWR -0
+C23 inC sky130_fd_sc_hd__and2_1_0/a_59_75# 0.01598f
+C24 inC sky130_fd_sc_hd__xor2_1_0/a_35_297# 0.01915f
+C25 sky130_fd_sc_hd__or2_1_0/VPB inC 0.03315f
+C26 sky130_fd_sc_hd__xor2_1_0/a_285_297# VPWR 0
+C27 sky130_fd_sc_hd__xor2_1_1/a_35_297# sky130_fd_sc_hd__xor2_1_0/a_35_297# 0.00258f
+C28 sky130_fd_sc_hd__or2_1_0/VPB sky130_fd_sc_hd__xor2_1_1/a_35_297# 0.01003f
+C29 inA sky130_fd_sc_hd__and2_1_0/a_59_75# 0.01963f
+C30 inA sky130_fd_sc_hd__xor2_1_0/a_35_297# 0.03102f
+C31 sky130_fd_sc_hd__or2_1_0/VPB inA 0.02333f
+C32 sky130_fd_sc_hd__or2_1_0/a_68_297# sky130_fd_sc_hd__and2_1_1/a_59_75# 0.00101f
+C33 carry sky130_fd_sc_hd__or2_1_0/VPB 0.05639f
+C34 inB sky130_fd_sc_hd__and2_1_1/a_59_75# 0
+C35 and1_out inC 0.00488f
+C36 sky130_fd_sc_hd__or2_1_0/a_150_297# VGND 0
+C37 and1_out sky130_fd_sc_hd__xor2_1_1/a_35_297# 0
+C38 and1_out inA 0
+C39 VGND sky130_fd_sc_hd__and2_1_1/a_145_75# 0
+C40 carry and1_out 0.00103f
+C41 and2_out inC 0.24508f
+C42 and2_out sky130_fd_sc_hd__xor2_1_1/a_35_297# 0.00145f
+C43 and2_out sky130_fd_sc_hd__xor2_1_0/a_285_47# 0
+C44 and2_out inA 0.00568f
+C45 sum sky130_fd_sc_hd__xor2_1_1/A 0.02062f
+C46 carry and2_out 0.03527f
+C47 inB sky130_fd_sc_hd__xor2_1_0/a_117_297# 0
+C48 sky130_fd_sc_hd__or2_1_0/a_68_297# inC 0.0036f
+C49 sky130_fd_sc_hd__or2_1_0/a_68_297# sky130_fd_sc_hd__xor2_1_1/a_35_297# 0.00117f
+C50 inC inB 0.89677f
+C51 sky130_fd_sc_hd__or2_1_0/a_68_297# inA 0
+C52 VGND sky130_fd_sc_hd__xor2_1_1/A 0.22582f
+C53 sum sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C54 sky130_fd_sc_hd__or2_1_0/VPB sum 0.07544f
+C55 sky130_fd_sc_hd__xor2_1_1/a_117_297# sky130_fd_sc_hd__xor2_1_1/A 0.00708f
+C56 carry sky130_fd_sc_hd__or2_1_0/a_68_297# 0.0179f
+C57 sky130_fd_sc_hd__xor2_1_1/a_35_297# inB 0.00106f
+C58 sky130_fd_sc_hd__xor2_1_1/a_285_297# sky130_fd_sc_hd__xor2_1_1/A 0.02464f
+C59 inB sky130_fd_sc_hd__xor2_1_0/a_285_47# 0.00293f
+C60 inA inB 1.4511f
+C61 VPWR sky130_fd_sc_hd__and2_1_1/a_145_75# -0
+C62 sky130_fd_sc_hd__and2_1_0/a_59_75# VGND 0
+C63 VGND sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C64 sky130_fd_sc_hd__or2_1_0/VPB VGND 0.10255f
+C65 and1_out sum 0
+C66 inC sky130_fd_sc_hd__and2_1_1/a_59_75# 0.02117f
+C67 sky130_fd_sc_hd__xor2_1_1/a_35_297# sky130_fd_sc_hd__and2_1_1/a_59_75# 0
+C68 sky130_fd_sc_hd__xor2_1_1/a_285_47# VPWR -0
+C69 and2_out sum 0
+C70 inA sky130_fd_sc_hd__and2_1_1/a_59_75# 0
+C71 VPWR sky130_fd_sc_hd__xor2_1_1/A 0.35018f
+C72 carry sky130_fd_sc_hd__and2_1_1/a_59_75# 0
+C73 sky130_fd_sc_hd__xor2_1_0/a_285_297# sky130_fd_sc_hd__xor2_1_1/A 0.01954f
+C74 and1_out VGND 0.06709f
+C75 and1_out sky130_fd_sc_hd__xor2_1_1/a_285_297# 0
+C76 sky130_fd_sc_hd__and2_1_0/a_59_75# VPWR -0.00127f
+C77 and2_out VGND 1.12503f
+C78 sky130_fd_sc_hd__or2_1_0/a_68_297# sum 0
+C79 VPWR sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C80 sky130_fd_sc_hd__or2_1_0/VPB VPWR 0.12152f
+C81 sky130_fd_sc_hd__xor2_1_1/a_285_297# and2_out 0
+C82 sky130_fd_sc_hd__xor2_1_0/a_285_297# sky130_fd_sc_hd__and2_1_0/a_59_75# 0
+C83 inB sum 0
+C84 sky130_fd_sc_hd__xor2_1_0/a_285_297# sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C85 inA sky130_fd_sc_hd__xor2_1_0/a_117_297# 0
+C86 sky130_fd_sc_hd__or2_1_0/a_68_297# VGND 0.0056f
+C87 inC sky130_fd_sc_hd__xor2_1_1/a_35_297# 0.03969f
+C88 and1_out VPWR 0.03546f
+C89 inC inA 0.1178f
+C90 inB VGND 0.14108f
+C91 carry inC 0.00178f
+C92 sky130_fd_sc_hd__xor2_1_1/a_35_297# inA 0
+C93 inA sky130_fd_sc_hd__xor2_1_0/a_285_47# 0
+C94 and2_out VPWR 0.1132f
+C95 and2_out sky130_fd_sc_hd__and2_1_0/a_145_75# 0
+C96 and2_out sky130_fd_sc_hd__xor2_1_0/a_285_297# 0
+C97 sky130_fd_sc_hd__or2_1_0/a_150_297# sky130_fd_sc_hd__xor2_1_1/A 0
+C98 VGND sky130_fd_sc_hd__and2_1_1/a_59_75# 0.00112f
+C99 sky130_fd_sc_hd__or2_1_0/a_68_297# VPWR 0
+C100 sky130_fd_sc_hd__xor2_1_1/A sky130_fd_sc_hd__and2_1_1/a_145_75# 0
+C101 inB VPWR 0.17239f
+C102 inB sky130_fd_sc_hd__and2_1_0/a_145_75# 0
+C103 sky130_fd_sc_hd__xor2_1_0/a_285_297# inB 0.00781f
+C104 sky130_fd_sc_hd__xor2_1_0/a_117_297# sum 0
+C105 inC sum 0.0176f
+C106 sky130_fd_sc_hd__xor2_1_1/a_285_47# sky130_fd_sc_hd__xor2_1_1/A 0
+C107 sky130_fd_sc_hd__xor2_1_1/a_35_297# sum 0.00308f
+C108 sky130_fd_sc_hd__xor2_1_0/a_117_297# VGND -0
+C109 inA sum 0
+C110 carry sum 0.00372f
+C111 and1_out sky130_fd_sc_hd__or2_1_0/a_150_297# 0
+C112 VPWR sky130_fd_sc_hd__and2_1_1/a_59_75# -0
+C113 inC VGND 0.1682f
+C114 sky130_fd_sc_hd__or2_1_0/a_150_297# and2_out 0
+C115 sky130_fd_sc_hd__xor2_1_1/a_285_297# inC 0.00882f
+C116 sky130_fd_sc_hd__xor2_1_1/a_35_297# VGND 0.02686f
+C117 sky130_fd_sc_hd__xor2_1_1/A sky130_fd_sc_hd__xor2_1_0/a_35_297# 0.01177f
+C118 sky130_fd_sc_hd__or2_1_0/VPB sky130_fd_sc_hd__xor2_1_1/A 0.04343f
+C119 inA VGND 0.89475f
+C120 carry VGND 0.26145f
+C121 and2_out sky130_fd_sc_hd__and2_1_1/a_145_75# 0.0013f
+C122 sky130_fd_sc_hd__and2_1_0/a_59_75# sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C123 sky130_fd_sc_hd__or2_1_0/VPB sky130_fd_sc_hd__and2_1_0/a_59_75# 0.00255f
+C124 sky130_fd_sc_hd__xor2_1_0/a_117_297# VPWR 0
+C125 sky130_fd_sc_hd__or2_1_0/VPB sky130_fd_sc_hd__xor2_1_0/a_35_297# 0.00295f
+C126 and1_out sky130_fd_sc_hd__xor2_1_1/A 0.03249f
+C127 inC VPWR 0.98539f
+C128 and2_out sky130_fd_sc_hd__xor2_1_1/A 0.01352f
+C129 sky130_fd_sc_hd__xor2_1_1/a_35_297# VPWR -0.003f
+C130 inC sky130_fd_sc_hd__xor2_1_0/a_285_297# 0
+C131 sky130_fd_sc_hd__xor2_1_0/a_285_47# VPWR -0
+C132 inA VPWR 0.17221f
+C133 carry VPWR 0.04368f
+C134 and1_out sky130_fd_sc_hd__and2_1_0/a_59_75# 0
+C135 and1_out sky130_fd_sc_hd__or2_1_0/VPB 0.01954f
+C136 sky130_fd_sc_hd__xor2_1_0/a_285_297# inA 0
+C137 and2_out sky130_fd_sc_hd__and2_1_0/a_59_75# 0.02905f
+C138 sky130_fd_sc_hd__or2_1_0/a_68_297# sky130_fd_sc_hd__xor2_1_1/A 0.00564f
+C139 and2_out sky130_fd_sc_hd__xor2_1_0/a_35_297# 0
+C140 sky130_fd_sc_hd__or2_1_0/VPB and2_out 0.01796f
+C141 VGND sum 0.05403f
+C142 sky130_fd_sc_hd__xor2_1_1/a_117_297# sum 0
+C143 inB sky130_fd_sc_hd__xor2_1_1/A 0.19987f
+C144 sky130_fd_sc_hd__xor2_1_1/a_285_297# sum 0.01543f
+C145 sky130_fd_sc_hd__or2_1_0/a_68_297# sky130_fd_sc_hd__or2_1_0/VPB 0.00221f
+C146 and1_out and2_out 0.05396f
+C147 sky130_fd_sc_hd__xor2_1_1/a_117_297# VGND -0.0015f
+C148 inB sky130_fd_sc_hd__and2_1_0/a_59_75# 0.05368f
+C149 sky130_fd_sc_hd__xor2_1_1/a_285_297# VGND -0.00107f
+C150 inB sky130_fd_sc_hd__xor2_1_0/a_35_297# 0.03094f
+C151 sky130_fd_sc_hd__or2_1_0/VPB inB 0.01411f
+C152 sky130_fd_sc_hd__xor2_1_1/A sky130_fd_sc_hd__and2_1_1/a_59_75# 0.05732f
+C153 VPWR sum 0.38079f
+C154 sky130_fd_sc_hd__or2_1_0/a_150_297# inC 0
+C155 and1_out sky130_fd_sc_hd__or2_1_0/a_68_297# 0.03871f
+C156 sky130_fd_sc_hd__xor2_1_0/a_285_297# sum 0
+C157 VPWR SUB 1.17965f
+C158 VGND SUB 1.30433f
+C159 sum SUB 0.09892f
+C160 sky130_fd_sc_hd__xor2_1_1/A SUB 0.37354f
+C161 inC SUB 0.5321f
+C162 sky130_fd_sc_hd__or2_1_0/VPB SUB 3.56718f
+C163 sky130_fd_sc_hd__xor2_1_1/a_285_297# SUB 0.00137f
+C164 sky130_fd_sc_hd__xor2_1_1/a_35_297# SUB 0.25457f
+C165 inA SUB 0.71835f
+C166 inB SUB 0.48678f
+C167 sky130_fd_sc_hd__xor2_1_0/a_285_297# SUB 0.00137f
+C168 sky130_fd_sc_hd__xor2_1_0/a_35_297# SUB 0.25457f
+C169 carry SUB 0.18229f
+C170 and2_out SUB 0.71917f
+C171 and1_out SUB 0.17849f
+C172 sky130_fd_sc_hd__or2_1_0/a_68_297# SUB 0.15387f
+C173 sky130_fd_sc_hd__and2_1_1/a_59_75# SUB 0.17706f
+C174 sky130_fd_sc_hd__and2_1_0/a_59_75# SUB 0.17706f
+*.ends
+
+
+.tran 1n 50u
+
+.control
+set color0 = white
+set color1 = black
+save all
+run
+plot v(inC)+8 v(inB)+6 v(inA)+4 v(sum)+2 v(carry)
+.endc
+
+.end
+

@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /foss/designs/Experiments/pnr/udcounter/runs/RUN_2026-01-30_10-38-30/18-openroad-tapendcapinsertion/or_metrics_out.json /usr/local/lib/python3.12/dist-packages/librelane/scripts/openroad/tapcell.tcl

@@ -1,0 +1,4 @@
+librelane -p sky130A -s sky130_fd_sc_hd \
+  --design-dir . \
+  config.json
+

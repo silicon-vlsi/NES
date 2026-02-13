@@ -1,0 +1,30 @@
+108. Printing statistics.
+
+=== udcounter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       20        - wires
+       23        - wire bits
+        4        - public wires
+        7        - public wire bits
+        4        - ports
+        7        - port bits
+       20  212.704 cells
+        1    8.758   sky130_fd_sc_hd__a21o_2
+        4   35.034   sky130_fd_sc_hd__a21oi_2
+        1    7.507   sky130_fd_sc_hd__and3_2
+        4   85.082   sky130_fd_sc_hd__dfxtp_2
+        1    3.754   sky130_fd_sc_hd__inv_2
+        1    6.256   sky130_fd_sc_hd__nand2_2
+        1    10.01   sky130_fd_sc_hd__nand3_2
+        1    6.256   sky130_fd_sc_hd__nor2_2
+        1    10.01   sky130_fd_sc_hd__nor3_2
+        2   17.517   sky130_fd_sc_hd__o21a_2
+        1    10.01   sky130_fd_sc_hd__o22a_2
+        2   12.512   sky130_fd_sc_hd__or2_2
+
+   Chip area for module '\udcounter': 212.704000
+     of which used for sequential elements: 85.081600 (40.00%)
+

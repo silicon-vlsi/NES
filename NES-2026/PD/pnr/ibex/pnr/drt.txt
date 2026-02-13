@@ -1,0 +1,1 @@
+librelane -p sky130A -s sky130_fd_sc_hd --design-dir . --run-tag Floorplan -F OpenROAD.CTS -T Misc.ReportManufacturability config_new.json

@@ -1,0 +1,5 @@
+read_lef /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef
+read_lef /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+read_def /foss/designs/nes/NES-2026/PD/ibex/pnr/runs/error1/23-openroad-globalplacement/ibex_core.def
+read_lib /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_sdc /foss/designs/nes/NES-2026/PD/ibex/pnr/runs/error1/23-openroad-globalplacement/ibex_core.sdc

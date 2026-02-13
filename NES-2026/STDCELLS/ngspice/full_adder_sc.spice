@@ -1,0 +1,19 @@
+** sch_path: /home/somya/work/xschem/full_adder_sc.sch
+**.subckt full_adder_sc inA inB inC sum carry
+*.ipin inA
+*.ipin inB
+*.ipin inC
+*.opin sum
+*.opin carry
+x1 inA inB VGND VNB VPB VPWR xor1_out sky130_fd_sc_hd__xor2_1
+x2 xor1_out inC VGND VNB VPB VPWR sum sky130_fd_sc_hd__xor2_1
+x3 and2_out and1_out VGND VNB VPB VPWR carry sky130_fd_sc_hd__or2_1
+x5 inA inB VGND VNB VPB VPWR and2_out sky130_fd_sc_hd__and2_1
+x4 inC xor1_out VGND VNB VPB VPWR and1_out sky130_fd_sc_hd__and2_1
+**** begin user architecture code
+
+
+
+**** end user architecture code
+**.ends
+.end

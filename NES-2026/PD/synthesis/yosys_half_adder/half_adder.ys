@@ -1,0 +1,32 @@
+# Read RTL
+read_verilog half_adder.v
+
+# Set top module
+hierarchy -top half_adder
+
+# Convert processes to logic
+proc
+
+# Optimize logic
+opt
+
+# Technology mapping (generic)
+techmap
+opt
+
+# Map to standard cells using liberty
+abc -liberty /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/lib/gf180mcu_fd_sc_mcu9t5v0__tt_025C_1v80.lib
+
+#Flatten
+flatten
+
+# Final cleanup
+opt
+clean
+
+# Print statistics
+stat
+
+# Write gate-level netlist
+write_verilog half_adder_netlist.v
+

@@ -1,0 +1,38 @@
+100. Printing statistics.
+
+=== udcounter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       34        - wires
+       37        - wire bits
+        4        - public wires
+        7        - public wire bits
+        4        - ports
+        7        - port bits
+       34   85.082 cells
+        5        -   $_ANDNOT_
+        8        -   $_MUX_
+        2        -   $_NAND_
+        1        -   $_NOR_
+        1        -   $_NOT_
+        1        -   $_ORNOT_
+        6        -   $_OR_
+        1        -   $_XNOR_
+        5        -   $_XOR_
+        4   85.082   sky130_fd_sc_hd__dfxtp_2
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+   Chip area for module '\udcounter': 85.081600
+     of which used for sequential elements: 85.081600 (100.00%)
+

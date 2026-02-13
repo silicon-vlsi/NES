@@ -1,0 +1,35 @@
+94. Printing statistics.
+
+=== udcounter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       30 wires
+       33 wire bits
+        4 public wires
+        7 public wire bits
+        4 ports
+        7 port bits
+       30 cells
+        5   $_ANDNOT_
+        4   $_MUX_
+        2   $_NAND_
+        1   $_NOR_
+        1   $_NOT_
+        1   $_ORNOT_
+        6   $_OR_
+        4   $_SDFF_PP0_
+        1   $_XNOR_
+        5   $_XOR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_SDFF_PP0_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+

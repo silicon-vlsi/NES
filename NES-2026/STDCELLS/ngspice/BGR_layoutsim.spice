@@ -1,0 +1,250 @@
+* NGSPICE file created from BGR_final2.ext - technology: sky130A
+.title BGR-sc  test
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.temp 27
+.global VDD GND
+
+.subckt BGR_nmostrial_copy net1 net3 net2 net4 gnd
+X0 net4 net1 net2 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X1 net1 net1 net3 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X2 net1 gnd gnd gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X3 net4 net1 net2 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X4 net3 net1 net1 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X5 net2 net1 net4 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X6 net1 net1 net3 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X7 net4 net1 net2 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X8 net1 gnd gnd gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X9 net1 net1 net3 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X10 gnd gnd net2 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X11 net2 gnd gnd gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X12 net3 net1 net1 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X13 gnd gnd net4 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X14 gnd gnd net4 gnd sky130_fd_pr__nfet_01v8_lvt ad=5 pd=12 as=2.5 ps=6 w=5 l=1
+X15 net3 net1 net1 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X16 net4 gnd gnd gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=5 ps=12 w=5 l=1
+X17 net2 net1 net4 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X18 net4 net1 net2 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X19 net4 gnd gnd gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X20 net1 net1 net3 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X21 net3 net1 net1 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X22 gnd gnd net1 gnd sky130_fd_pr__nfet_01v8_lvt ad=5 pd=12 as=2.5 ps=6 w=5 l=1
+X23 net2 net1 net4 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X24 net1 gnd gnd gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=5 ps=12 w=5 l=1
+X25 gnd gnd net1 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X26 net2 net1 net4 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+X27 gnd gnd net1 gnd sky130_fd_pr__nfet_01v8_lvt ad=2.5 pd=6 as=2.5 ps=6 w=5 l=1
+.ends
+
+.subckt sky130_fd_pr__rf_pnp_05v5_W3p40L3p40 Emitter Collector Base m=1
+X0 Collector Base Emitter sky130_fd_pr__pnp_05v5_W3p40L3p40
+**devattr s=462400,2720
+.ends
+
+.subckt BGR_bjt_copy sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_3/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_16/Emitter
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_6 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_5 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_7 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_8 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_20 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_10 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_11 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_22 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_21 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_12 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_23 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_13 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_24 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_25 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_14 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_26 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_15 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_27 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_16 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_16/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_17 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_18 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_0 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_19 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_1 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_2 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
+BGR_layoutsim.spice+ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+Xsky130_fd_pr__rf_pnp_05v5_W3p40L3p40_3 sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_3/Emitter
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_9/Base
++ sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
++ m=1
+.ends
+
+.subckt BGR_pmos2 a_n5400_n600# a_n7500_n200# a_n5900_n200# a_n1600_n200# a_n5200_n200#
++ w_n8120_n1600#
+X0 a_n7500_n200# a_n5900_n200# a_n5900_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X1 a_n7500_n200# a_n5900_n200# a_n2810_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5.625 pd=7.25 as=2 ps=5.8 w=5 l=1
+X2 a_n5900_n200# a_n5900_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X3 a_n7500_n200# a_n7500_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=123.75 ps=179.5 w=5 l=2
+X4 a_n5900_n200# a_n5400_n600# a_n5200_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=1
+X5 a_n7500_n200# a_n7500_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=3.75 pd=6.5 as=0 ps=0 w=5 l=2
+X6 a_n5900_n200# a_n7500_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=6.25 pd=7.5 as=5 ps=7 w=5 l=2
+X7 a_n7500_n200# a_n5900_n200# a_n5200_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X8 a_n5400_n600# a_n7500_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=6.125 pd=7.45 as=3.75 ps=6.5 w=5 l=1
+X9 a_n7500_n200# a_n5900_n200# a_n5900_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X10 a_n7500_n200# a_n7500_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=0 ps=0 w=5 l=2
+X11 a_n7500_n200# a_n7500_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=10 pd=14 as=0 ps=0 w=5 l=2
+X12 a_n7500_n200# a_n7500_n200# a_n5900_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=3.75 pd=6.5 as=5 ps=7 w=5 l=1
+X13 a_n7500_n200# a_n5900_n200# a_n5200_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X14 a_n2810_n200# a_n5900_n200# a_n5400_n600# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=2 pd=5.8 as=6.125 ps=7.45 w=5 l=1
+X15 a_n5900_n200# a_n5900_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X16 a_n1600_n200# a_n5900_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X17 a_n7500_n200# a_n5900_n200# a_n1600_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X18 a_n5200_n200# a_n5900_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X19 a_n7500_n200# a_n5900_n200# a_n1600_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X20 a_n5200_n200# a_n5900_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5 ps=7 w=5 l=2
+X21 a_n1600_n200# a_n5900_n200# a_n7500_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=5.625 ps=7.25 w=5 l=2
+X22 a_n5200_n200# a_n5400_n600# a_n5900_n200# w_n8120_n1600# sky130_fd_pr__pfet_01v8_lvt ad=5 pd=7 as=6.25 ps=7.5 w=5 l=1
+.ends
+
+.subckt BGR_starternmos_copy pmosterminal gnd
+X0 pmosterminal pmosterminal a_n1460_n340# gnd sky130_fd_pr__nfet_01v8_lvt ad=0.8 pd=3.6 as=0.4 ps=1.8 w=1 l=7
+X1 a_n1460_n340# a_n1460_n340# gnd gnd sky130_fd_pr__nfet_01v8_lvt ad=0.4 pd=1.8 as=0.8 ps=3.6 w=1 l=7
+.ends
+
+.subckt BGR_resistor_copy a_1640_n1534# a_590_n3450# a_n150_n4100# a_1640_1466# a_590_1466#
+X0 a_940_1466# a_590_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X1 a_1640_1466# a_1640_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X2 a_3750_n1534# a_4100_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X3 a_1640_1466# a_1640_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X4 a_2700_1466# a_3400_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X5 a_1990_n1534# a_1290_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X6 a_3750_n1534# a_3400_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X7 a_n150_n4100# a_n150_n4100# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X8 a_n150_n4100# a_n150_n4100# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X9 a_2700_1466# a_2340_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X10 a_590_n1534# a_590_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X11 a_2700_n1534# a_2340_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X12 a_n150_n4100# a_n150_n4100# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X13 a_n150_n4100# a_n150_n4100# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X14 a_590_n1534# a_590_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X15 a_1990_1466# a_2340_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X16 a_1640_n1534# a_1640_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X17 a_2700_n1534# a_3400_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X18 a_3750_1466# a_4100_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X19 a_590_n1534# a_1290_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X20 a_1990_1466# a_1290_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X21 a_590_1466# a_590_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X22 a_940_1466# a_1290_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X23 a_1990_n1534# a_2340_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X24 a_1640_n450# a_1640_n3450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+X25 a_3750_1466# a_3400_n450# a_n150_n4100# sky130_fd_pr__res_high_po_1p41 l=7.58
+.ends
+
+
+XBGR_nmostrial_copy_0 BGR_nmostrial_copy_0/net1 BGR_nmostrial_copy_0/net3 BGR_nmostrial_copy_0/net2
++ BGR_nmostrial_copy_0/net4 gnd BGR_nmostrial_copy
+XBGR_bjt_copy_0 gnd BGR_bjt_copy_0/sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_3/Emitter
++ BGR_bjt_copy_0/sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter BGR_nmostrial_copy_0/net3
++ BGR_bjt_copy
+XBGR_pmos2_0 BGR_starternmos_copy_0/pmosterminal vdd BGR_nmostrial_copy_0/net2 vref
++ BGR_nmostrial_copy_0/net1 vdd BGR_pmos2
+XBGR_starternmos_copy_0 BGR_starternmos_copy_0/pmosterminal gnd BGR_starternmos_copy
+XBGR_resistor_copy_0 BGR_bjt_copy_0/sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_4/Emitter
++ BGR_bjt_copy_0/sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_3/Emitter gnd BGR_nmostrial_copy_0/net4
++ vref BGR_resistor_copy
+
+*** supply voltage
+*.dc    vsup    0       3.3     0.3.3
+
+vsup    vdd     gnd     dc      2
+
+.dc temp -40 125 5
+
+*vsup   vdd     gnd     pulse   0       2       10n     1u      1u      1m      100u
+*.tran  5n      10u
+
+.control
+run
+plot v(vref)
+*plot vid1#branch vid2#branch vid3#branch vid4#branch vid5#branch
+
+.endc
+.end
+
